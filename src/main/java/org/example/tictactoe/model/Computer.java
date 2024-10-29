@@ -1,4 +1,4 @@
 package org.example.tictactoe.model;
 
-public class Bot {
+public class Computer {
 }
