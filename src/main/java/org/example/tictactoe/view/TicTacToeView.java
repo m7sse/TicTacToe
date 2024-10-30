@@ -19,6 +19,14 @@ public class TicTacToeView {
             }
         }
     }
-
+    public GridPane getBoardGrid() {
+        return boardGrid;
+    }
+    public Button getButtons(int row, int col) {
+        return buttons[row][col];
+    }
+    public void updateButton (int row, int col, char playerSymbol) {
+        buttons[row][col].setText(String.valueOf(playerSymbol));
+    }
 
 }
