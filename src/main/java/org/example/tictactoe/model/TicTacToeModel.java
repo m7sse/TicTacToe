@@ -20,8 +20,24 @@ public class TicTacToeModel {
             }
         }
     }
+
     private boolean isValidMove(int row, int col){
         return row >= 0 && col >= 0 && row < 3 && col < 3 && board[row][col] == ' ';
+    }
+
+    public boolean makeMove(int row, int col){
+        if (isValidMove(row, col)) {
+            board[row][col] = player;
+            player = (player == 'X') ? 'O' : 'X';
+            return true;
+        }
+        return false;
+    }
+    public char getPlayer(){
+        return player;
+    }
+    public char[][] getBoard(){
+        return board;
     }
 
 }
