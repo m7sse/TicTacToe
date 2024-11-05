@@ -9,5 +9,16 @@ public class Computer {
     public Computer(char symbol) {
         this.symbol = symbol;
     }
+    public void makeMove (TicTacToeModel model){
+        int row, col;
+        do {
+            row = random.nextInt(3);
+            col = random.nextInt(3);
+        }while (!model.isValidMove(row, col));
 
+        model.makeMove(row, col);
+    }
+    public char getSymbol() {
+        return symbol;
+    }
 }
