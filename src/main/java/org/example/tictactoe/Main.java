@@ -4,6 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.tictactoe.controller.TicTacToeController;
+import org.example.tictactoe.model.TicTacToeModel;
+import org.example.tictactoe.model.Player;
+import org.example.tictactoe.model.Computer;
 
 import java.io.IOException;
 
@@ -11,8 +15,17 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+
+        TicTacToeModel model = new TicTacToeModel();
+        Player playerX = new Player('X');
+        Computer computerO = new Computer('O');
+
+        TicTacToeController controller = fxmlLoader.getController();
+        controller.setGameParameters(model, playerX, computerO);
+
+        Scene scene = new Scene(fxmlLoader.load(), 400, 400);
+
+        stage.setTitle("Tic-Tac-Toe");
         stage.setScene(scene);
         stage.show();
     }
