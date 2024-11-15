@@ -24,6 +24,7 @@ public class TicTacToeController {
         this.computerO = computerO;
     }
 
+
     @FXML
     public void initialize() {
         for (int row = 0; row < 3; row++) {

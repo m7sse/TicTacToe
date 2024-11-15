@@ -11,6 +11,7 @@ public class TicTacToeModel {
         player = 'X';
         scoreX = 0;
         scoreO = 0;
+
         initializeBoard();
     }
 
@@ -64,6 +65,7 @@ public class TicTacToeModel {
         }
         return true;
     }
+
 
     public void resetBoard() {
         initializeBoard();

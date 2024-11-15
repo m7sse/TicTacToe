@@ -23,6 +23,7 @@ public class Main extends Application {
         TicTacToeController controller = fxmlLoader.getController();
         controller.setGameParameters(model, playerX, computerO);
 
+
         Scene scene = new Scene(fxmlLoader.load(), 400, 400);
 
         stage.setTitle("Tic-Tac-Toe");
